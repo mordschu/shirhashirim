@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <title>Newsletters</title>
+    <head>
+        <link rel="icon" href="images/favicon logo.ico">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap" rel="stylesheet">
+        <style>
+            .logo {
+                justify-content: left;
+                height: 150px;
+            }
+            .wel {
+                text-align: center;
+                padding: 10px;
+                color: black;
+                font-family:boucherie-block;
+                border: solid 4px blue;
+                position: relative;
+                vertical-align: top;
+                top: -110px;
+            }
+            .pages {
+                text-align: center;
+                padding: 10px;
+                color: black;
+                font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                border: solid 4px blue;
+                position: relative;
+                vertical-align: top;
+                top: -110px;
+            }
+            .pages:hover{font-size: 20px;}
+            .header {
+                text-align: center;
+            }
+            .button {
+                cursor: pointer;
+                color: rgb(0, 0, 0);
+                background-color: rgb(255, 255, 255);
+                border: 5px solid black;
+                border-radius: 5px;
+                padding: 5px;
+                margin-right: .5%;
+                margin-left: .5%;
+                margin-bottom: .5%;
+                margin-top: .5%;
+                padding-right: 2%;
+                padding-left: 2%;
+                display: inline-block;
+                font-weight: bold;
+                text-align: center;
+                font-size: 24px;
+            }
+            .button:hover{text-decoration: underline;}
+            .stuff {
+                text-align: center;
+                font-family: 'Open Sans', sans-serif;
+                font-size: 45px;
+            }
+        </style>
+    </head>
+    <body style="background-color: silver;">
+        <a href="index.html"><img class="logo" src="images/Logo.jpg"></img></a>            
+        <div class="header">   
+        <div>
+                <h1 class="wel" style="border: none;" >THE OFFICIAL SHIR HASHIRIM WEBSITE</h1>
+                <a class="pages" href="index.html" style="margin-left: 10px;">Home</a>
+                <a class="pages" href="About.html" style="padding: 10px 20px;">About</a>
+                <a class="pages" href="Newsletters.html" style="padding: 10px 20px; background-color: black; color:white">Newsletters</a>
+                <a class="pages" href="announcements.html" style="padding: 10px 20px;">Announcements</a>
+                <a class="pages" href="board.html" style="padding: 10px 20px;">Board</a>
+                <a class="pages" href="contact.html" style="padding:10px 20px;">Contact us</a>
+                
+            </div>
+            <!--p style="background-color: black; width: 105%;
+            height: 25px; margin-top: 20px; margin-left: -8px;" ></p-->
+        </div>
+        
+        <h2 class="stuff">Complete Newsletters</h2>
+        
+        <div style="width: 100%">
+            <div id="buttons" style="text-align: center;">
+            </div>
+        </div>
+        <div style="text-align: center" id="pdf">
+            <iframe style="position: auto; width: 75%; height: 1800px;" src="shirhashirim13.pdf" width="800" height="1200"></iframe>
+        </div>
+
+        <script>
+            onload = function() {
+            newsletterbtn('1', 'Week Number One');
+            newsletterbtn('2', 'Week Number Two');
+            newsletterbtn('3','Week Number Three');
+            newsletterbtn('4', 'Week Number Four');
+            newsletterbtn('5', 'Week Number Five');
+            newsletterbtn('6', 'Week Number Six');
+            newsletterbtn('7', 'Week Number Seven');
+            newsletterbtn('8', 'Week Number Eight');
+            newsletterbtn('9', 'Week Number Nine');
+            newsletterbtn('10', 'Week Number Ten');
+            newsletterbtn('11', 'Week Number Eleven');
+            newsletterbtn('12', 'Week Number Twelve');
+            newsletterbtn('13', 'Week Number Thirteen');
+            newsletterbtn('14', 'Week Number Fourteen');
+            }
+            function newsletterbtn(num, parsha) {
+             document.getElementById("buttons").innerHTML += "<a id='openclose' class='button' onclick='openclose(\"" + num + "\")' style='width:100px; height: 50%;'>Issue #" + num + " - " + parsha + "</a>";
+            }
+            
+            function openclose(num) {
+              document.getElementById("pdf").innerHTML = "<iframe id='page' src='shirhashirim" + num + ".pdf#toolbar=1&navpanes=0&statusbar=0&view=FitW height='100%' width='80%' frameborder='0' style='height: 1150px; width: 75%; margin-bottom: 10%;'> </iframe>";
+            }
+            
+            
+            
+            </script>
+
+    </body>
+
+    <footer>
+        <p style="background-color: black; color: white; text-align: center; font-family: 'Open Sans', sans-serif; font-size: 20px;"> ©SHIR HaShirim 2024. ALL RIGHT RESERVED. WEBSITE MADE BY SHALOM FRENKEL.</p>
+    </footer>
+
+</html>
